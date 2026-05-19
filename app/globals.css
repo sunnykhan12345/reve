@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Poppins", ui-sans-serif, system-ui, sans-serif;
+
+  --color-reve-red: #e23022;
+  --color-reve-black: #101010;
+  --color-reve-ink: #191919;
+  --color-reve-muted: #50565d;
+  --color-reve-light: #f6f6f6;
+  --color-reve-line: #e2e2e2;
+  --color-reve-blush: #ffe4e4;
+  --color-reve-gold: #fdba2b;
+
+  --radius-reve: 28px;
+
+  --shadow-soft: 0 18px 60px rgb(16 16 16 / 0.08);
+  --shadow-header: 0 12px 34px rgb(16 16 16 / 0.08);
+
+  --animate-float: float 5s ease-in-out infinite;
+  --animate-marquee: marquee 22s linear infinite;
+
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-12px);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #101010;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+  background: hsl(1, 86%, 55%);
+  color: #ffffff;
+}
+
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-[1440px] px-5 sm:px-8 xl:px-0;
+  }
+
+  .section-spacing {
+    @apply py-20 md:py-28 lg:py-[120px];
+  }
+
+  .section-heading {
+    @apply text-[38px] font-semibold leading-[1.12] tracking-[-0.03em] text-reve-black sm:text-[48px] lg:text-[56px];
+  }
+
+  .body-copy {
+    @apply text-[15px] font-normal leading-[1.65] tracking-[-0.01em] text-reve-muted sm:text-base;
+  }
+
+  .image-cover {
+    @apply h-full w-full object-cover;
+  }
+
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
