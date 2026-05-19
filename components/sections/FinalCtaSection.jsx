@@ -30,7 +30,7 @@ export default function FinalCtaSection() {
       </div>
 
       <MotionSection className="relative z-10 mx-auto flex max-w-[880px] flex-col items-center text-center">
-        <h2 className="text-[40px] font-normal leading-[1.15] tracking-[-0.04em] text-[#222222] sm:text-[58px] lg:text-[66px]">
+        <h2 className="text-[40px] font-normal leading-[1.15] tracking-[-0.04em] text-[#222222] sm:text-[58px] lg:text-[64px]">
           {t("finalCta.title")}
         </h2>
         <div className="mt-10">

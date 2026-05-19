@@ -19,7 +19,7 @@ export default function HomePage() {
         <OptionsSection />
         <ProcessSection />
         <TestimonialsSection />
-        {/* <FinalCtaSection /> */}
+        <FinalCtaSection />
       </main>
       <Footer />
     </>

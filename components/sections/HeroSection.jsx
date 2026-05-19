@@ -14,7 +14,7 @@ export default function HeroSection() {
       id="home"
       className="relative overflow-hidden bg-[linear-gradient(112deg,#ffffff_0%,#ffffff_72%,#ffe4e4_100%)] pb-14 pt-[145px] sm:pb-16 sm:pt-[160px] lg:pb-[58px] lg:pt-[176px]"
     >
-      <div className="mx-auto w-full max-w-[1440px]">
+      <div className="mx-auto w-full max-w-[1440px] ">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
@@ -22,7 +22,7 @@ export default function HeroSection() {
           className="mx-auto max-w-[1190px] px-5 text-center sm:px-8"
         >
           <h1 className="text-[42px] font-bold leading-[1.14] tracking-[0.02em] text-reve-ink sm:text-[58px] lg:text-[68px] xl:text-[70px]">
-            {/* {t("hero.title")} */}
+            {t("hero.title")}
           </h1>
           <div className="mt-14 flex justify-center sm:mt-10 lg:mt-11">
             <CtaButton />
@@ -35,7 +35,7 @@ export default function HeroSection() {
           transition={{ duration: 0.85, delay: 0.18, ease: [0.22, 1, 0.36, 1] }}
           className="mt-8 px-5 sm:mt-10 sm:px-8 lg:px-0"
         >
-          {/* <div className="relative h-[320px] overflow-hidden rounded-[28px] sm:h-[400px] lg:hidden">
+          <div className="relative h-[320px] overflow-hidden rounded-[28px] sm:h-[400px] lg:hidden">
             <Image
               src={heroImages.center}
               alt={t("hero.centerAlt")}
@@ -44,9 +44,9 @@ export default function HeroSection() {
               sizes="(max-width: 1024px) 92vw, 790px"
               className="image-cover transition-transform duration-700 hover:scale-105"
             />
-          </div> */}
+          </div>
 
-          {/* <div className="relative hidden h-[430px] lg:block">
+          <div className="relative hidden h-[430px] lg:block">
             <div className="absolute bottom-0 left-0 h-[430px] w-[304px] overflow-hidden rounded-r-[30px] xl:w-[315px]">
               <Image
                 src={heroImages.left}
@@ -79,7 +79,7 @@ export default function HeroSection() {
                 className="image-cover transition-transform duration-700 hover:scale-105"
               />
             </div>
-          </div> */}
+          </div>
         </motion.div>
       </div>
     </section>
