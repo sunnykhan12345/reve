@@ -93,7 +93,7 @@ export default function Header() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <LanguageToggle />
-          <Button asChild variant="dark" size="base" className="min-w-[140px] h-14 rounded-[72px] text-base">
+          <Button asChild variant="dark" size="base" className="min-w-[140px] w-full overflow-hidden truncate px-3 h-14 rounded-[72px] text-base">
             <Link href="#contact">{t("common.bookCall")}</Link>
           </Button>
         </div>

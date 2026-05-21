@@ -47,7 +47,7 @@ export default function HeroSection() {
           </div>
 
           <div className="relative hidden h-[430px] lg:block">
-            <div className="absolute bottom-0 left-0 h-[430px] w-[304px] overflow-hidden rounded-r-[30px] xl:w-[315px]">
+            <div className="absolute bottom-0 left-0 h-[536px] w-[304px] overflow-hidden rounded-r-[30px] xl:w-[315px]">
               <Image
                 src={heroImages.left}
                 alt={t("hero.leftAlt")}
@@ -58,7 +58,7 @@ export default function HeroSection() {
               />
             </div>
 
-            <div className="absolute bottom-0 left-1/2 h-[390px] w-[760px] -translate-x-1/2 overflow-hidden rounded-[30px] xl:w-[790px]">
+            <div className="absolute bottom-0 left-1/2 h-[440px] w-[760px] -translate-x-1/2 overflow-hidden rounded-[30px] xl:w-[790px]">
               <Image
                 src={heroImages.center}
                 alt={t("hero.centerAlt")}
@@ -69,7 +69,7 @@ export default function HeroSection() {
               />
             </div>
 
-            <div className="absolute bottom-0 right-0 h-[430px] w-[304px] overflow-hidden rounded-l-[30px] xl:w-[315px]">
+            <div className="absolute bottom-0 right-0 h-[536px] w-[304px] overflow-hidden rounded-l-[30px] xl:w-[315px]">
               <Image
                 src={heroImages.right}
                 alt={t("hero.rightAlt")}
