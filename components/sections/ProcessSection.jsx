@@ -27,7 +27,7 @@ export default function ProcessSection() {
 
             <div className="grid grid-cols-4 gap-10">
               {processSteps.map((step) => (
-                <div key={step.number} className="relative pt-20">
+                <div key={step.number} className="group relative pt-20">
                   <span
                     aria-hidden="true"
                     className="absolute left-0 top-[2px] z-10 grid h-5 w-5 place-items-center rounded-full border-2 border-reve-red bg-white"
@@ -35,7 +35,7 @@ export default function ProcessSection() {
                     <span className="h-[6px] w-[6px] rounded-full bg-reve-red" />
                   </span>
 
-                  <div className="text-[100px] font-bold leading-none tracking-[-0.06em] text-[#E5E7EB]">
+                  <div className="text-[100px] font-bold leading-none tracking-[-0.06em] text-[#E5E7EB] transition-colors duration-300 group-hover:text-reve-red">
                     {step.number}
                   </div>
 

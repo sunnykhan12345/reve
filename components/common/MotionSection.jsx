@@ -13,9 +13,9 @@ export default function MotionSection({ children, className = "", delay = 0 }) {
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.18 }}
-      variants={sectionVariants}
-      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay }}
+      // viewport={{ once: true, amount: 0.18 }}
+      // variants={sectionVariants}
+      // transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1], delay }}
     >
       {children}
     </motion.div>
