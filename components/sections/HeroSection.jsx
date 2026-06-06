@@ -21,7 +21,7 @@ export default function HeroSection() {
           transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
           className="mx-auto max-w-[1190px] px-5 text-center sm:px-8"
         >
-          <h1 className="text-[42px] font-bold leading-[1.14] tracking-[0.02em] text-reve-ink sm:text-[58px] lg:text-[68px] xl:text-[70px]">
+          <h1 className="text-[42px] font-semibold leading-[1.14] tracking-[0.02em] text-reve-ink sm:text-[58px] lg:text-[68px] xl:text-[70px]">
             {t("hero.title")}
           </h1>
           <div className="mt-14 flex justify-center sm:mt-10 lg:mt-11">

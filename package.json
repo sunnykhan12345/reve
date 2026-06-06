@@ -15,6 +15,7 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-phone-input-2": "^2.15.1",
     "tailwind-merge": "latest"
   },
   "devDependencies": {

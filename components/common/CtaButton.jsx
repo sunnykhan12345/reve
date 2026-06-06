@@ -5,7 +5,11 @@ import { useLanguage } from "@/components/common/LanguageProvider";
 import { cn } from "@/lib/utils";
 import { BackIcon } from "@/public/icons/icon";
 
-export default function CtaButton({ href = "#contact", children, className = "" }) {
+export default function CtaButton({
+  href = "#contact",
+  children,
+  className = "",
+}) {
   const { t } = useLanguage();
   const label = children || t("common.bookCall");
 
@@ -13,7 +17,7 @@ export default function CtaButton({ href = "#contact", children, className = "" 
     <Link
       href={href}
       className={cn(
-        "group inline-flex h-[56px] min-w-[240px] items-center justify-between gap-5 rounded-[72px] bg-reve-red px-6 text-base font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#dd2523] hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reve-red focus-visible:ring-offset-2",
+        "group inline-flex h-14 min-w-[240px] items-center justify-between gap-5 rounded-[72px] bg-reve-red px-6 py-2.5 text-base font-medium text-white transition-all duration-300 hover:-translate-y-1 hover:bg-[#dd2523] hover:shadow-soft focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-reve-red focus-visible:ring-offset-2",
         className,
       )}
     >

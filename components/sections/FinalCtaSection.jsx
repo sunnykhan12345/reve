@@ -11,7 +11,7 @@ export default function FinalCtaSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="contact" className="relative bg-white px-5 py-20 sm:px-8 lg:py-[112px]">
+    <section id="contact" className="relative bg-white px-5 py-20 sm:px-8 lg:py-[112px] max-w-[1440px] mx-auto">
       <div className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block">
         {ctaAvatars.map((avatar, index) => (
           <Image

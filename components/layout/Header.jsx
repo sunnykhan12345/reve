@@ -38,8 +38,11 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("#home");
   const [isBookModalOpen, setIsBookModalOpen] = useState(false);
-  const { t } = useLanguage();
-
+  // const { t } = useLanguage();
+  const language = useLanguage();
+  const { t } = language;
+  const locale =
+    language.locale || language.currentLocale || language.language || "en";
   useEffect(() => {
     const onScroll = () => setIsFixed(window.scrollY > 100);
 
@@ -110,7 +113,7 @@ export default function Header() {
                 href={link.href}
                 className={cn(
                   "group relative text-base font-normal tracking-[-0.01em] transition-colors duration-300 hover:text-reve-red",
-                  isActive ? "text-reve-red" : "text-reve-black",
+                  isActive ? "text-reve-red font-semibold" : "text-reve-black",
                 )}
               >
                 {t(link.labelKey)}
@@ -128,22 +131,13 @@ export default function Header() {
 
         <div className="hidden items-center gap-4 lg:flex">
           <LanguageToggle />
-
-          {/* <Button
-            asChild
-            variant="dark"
-            size="base"
-            className="h-14 w-full min-w-[140px] overflow-hidden truncate rounded-[72px] px-3 text-base"
-          >
-            <Link href="#contact">{t("common.bookCall")}</Link>
-          </Button> */}
           <Button
             type="button"
             onClick={() => {
               setIsOpen(false);
               setIsBookModalOpen(true);
             }}
-            className="h-14 w-full min-w-[140px] cursor-pointer bg-black! overflow-hidden truncate rounded-[72px] px-3 text-base"
+            className="h-14 w-full min-w-[139px] cursor-pointer bg-black! overflow-hidden truncate rounded-[72px] px-6 py-2.5 text-base"
           >
             {t("common.bookCall")}
           </Button>
@@ -206,6 +200,7 @@ export default function Header() {
       <BookCallModal
         open={isBookModalOpen}
         onClose={() => setIsBookModalOpen(false)}
+        locale={locale}
       />
     </header>
   );

@@ -22,7 +22,7 @@ export default function LanguageToggle({ className = "" }) {
             key={item.code}
             type="button"
             className={cn(
-              "h-9 rounded-full px-4 text-xs font-semibold tracking-[-0.01em] transition-all duration-300",
+              "h-10 rounded-full px-4 text-xs font-semibold tracking-[-0.01em] transition-all duration-300 cursor-pointer",
               active
                 ? "bg-reve-black text-white shadow-sm"
                 : "text-reve-muted hover:bg-white hover:text-reve-black",

@@ -1,7 +1,10 @@
 import { cn } from "@/lib/utils";
-import { BusniessIcon } from "@/public/icons/icon";
 
-export default function IconSlot({ label = "Icon placeholder", className = "" }) {
+export default function IconSlot({
+  label = "Icon placeholder",
+  className = "",
+  Icon,
+}) {
   return (
     <div
       className={cn(
@@ -10,7 +13,7 @@ export default function IconSlot({ label = "Icon placeholder", className = "" })
       )}
       aria-label={label}
     >
-   <BusniessIcon />
+      {Icon && <Icon />}
     </div>
   );
 }
