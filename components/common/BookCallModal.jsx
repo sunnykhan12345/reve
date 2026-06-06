@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import PhoneInput from "react-phone-input-2";
 import { defaultLocale, translations } from "@/lib/translations";
-
+import Conatct from "../../public/images/contact.png";
 // Add once in app/layout.jsx or global CSS entry:
 // import "react-phone-input-2/lib/style.css";
 
@@ -280,7 +280,7 @@ export default function BookCallModal({
       onClose();
     }, 2200);
   };
-
+console.log(Conatct)
   return (
     <>
       <style>{`
@@ -428,7 +428,7 @@ export default function BookCallModal({
           </button>
           <div className="relative hidden min-h-full overflow-hidden rounded-[12px] md:block">
             <Image
-              src="/images/contact.png"
+              src={Conatct}
               alt={t.imageAlt}
               fill
               sizes="420px"
