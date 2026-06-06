@@ -10,8 +10,11 @@ import { useState } from "react";
 
 import BookCallModal from "../common/BookCallModal"; // adjust path
 export default function FinalCtaSection() {
-  const { t } = useLanguage();
   const [openModal, setOpenModal] = useState(false);
+  const language = useLanguage();
+  const { t } = language;
+  const locale =
+    language.locale || language.currentLocale || language.language || "en";
   return (
     <section
       id="contact"
@@ -44,7 +47,7 @@ export default function FinalCtaSection() {
           <CtaButton onClick={() => setOpenModal(true)} />
         </div>
       </MotionSection>
-      <BookCallModal open={openModal} onClose={() => setOpenModal(false)} />
+      <BookCallModal open={openModal} onClose={() => setOpenModal(false)} locale={locale}/>
     </section>
   );
 }
