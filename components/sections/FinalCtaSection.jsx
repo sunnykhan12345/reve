@@ -6,12 +6,17 @@ import MotionSection from "@/components/common/MotionSection";
 import { useLanguage } from "@/components/common/LanguageProvider";
 import { ctaAvatars } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { useState } from "react";
 
+import BookCallModal from "../common/BookCallModal"; // adjust path
 export default function FinalCtaSection() {
   const { t } = useLanguage();
-
+  const [openModal, setOpenModal] = useState(false);
   return (
-    <section id="contact" className="relative bg-white px-5 py-20 sm:px-8 lg:py-[112px] max-w-[1440px] mx-auto">
+    <section
+      id="contact"
+      className="relative bg-white px-5 py-20 sm:px-8 lg:py-[112px] max-w-[1440px] mx-auto"
+    >
       <div className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block">
         {ctaAvatars.map((avatar, index) => (
           <Image
@@ -23,7 +28,9 @@ export default function FinalCtaSection() {
             className={cn(
               "absolute rounded-full object-cover shadow-soft",
               avatar.className,
-              index % 2 === 0 ? "animate-float" : "animate-[float_6s_ease-in-out_infinite]",
+              index % 2 === 0
+                ? "animate-float"
+                : "animate-[float_6s_ease-in-out_infinite]",
             )}
           />
         ))}
@@ -33,10 +40,11 @@ export default function FinalCtaSection() {
         <h2 className="text-[40px] font-normal leading-[1.15] tracking-[-0.04em] text-[#222222] sm:text-[58px] lg:text-[64px]">
           {t("finalCta.title")}
         </h2>
-        <div className="mt-10">
-          <CtaButton />
+        <div className="mt-14 flex justify-center sm:mt-10 lg:mt-11">
+          <CtaButton onClick={() => setOpenModal(true)} />
         </div>
       </MotionSection>
+      <BookCallModal open={openModal} onClose={() => setOpenModal(false)} />
     </section>
   );
 }

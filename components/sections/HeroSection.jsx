@@ -5,10 +5,12 @@ import { motion } from "framer-motion";
 import CtaButton from "@/components/common/CtaButton";
 import { useLanguage } from "@/components/common/LanguageProvider";
 import { heroImages } from "@/lib/data";
+import BookCallModal from "../common/BookCallModal"; // adjust path
+import { useState } from "react";
 
 export default function HeroSection() {
   const { t } = useLanguage();
-
+  const [openModal, setOpenModal] = useState(false);
   return (
     <section
       id="home"
@@ -24,8 +26,10 @@ export default function HeroSection() {
           <h1 className="text-[42px] font-semibold leading-[1.14] tracking-[0.02em] text-reve-ink sm:text-[58px] lg:text-[68px] xl:text-[70px]">
             {t("hero.title")}
           </h1>
+          {/* click this button open form model */}
+      
           <div className="mt-14 flex justify-center sm:mt-10 lg:mt-11">
-            <CtaButton />
+            <CtaButton onClick={() => setOpenModal(true)} />
           </div>
         </motion.div>
 
@@ -82,6 +86,7 @@ export default function HeroSection() {
           </div>
         </motion.div>
       </div>
+      <BookCallModal open={openModal} onClose={() => setOpenModal(false)} />
     </section>
   );
 }
