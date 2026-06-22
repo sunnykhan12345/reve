@@ -130,7 +130,7 @@ export default function Header() {
         </div>
 
         <div className="hidden items-center gap-4 lg:flex">
-          <LanguageToggle />
+          {/* <LanguageToggle /> */}
           <Button
             type="button"
             onClick={() => {

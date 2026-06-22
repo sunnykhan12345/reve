@@ -1,5 +1,4 @@
 "use client";
-
 import Image from "next/image";
 import CtaButton from "@/components/common/CtaButton";
 import MotionSection from "@/components/common/MotionSection";
@@ -7,7 +6,6 @@ import { useLanguage } from "@/components/common/LanguageProvider";
 import { ctaAvatars } from "@/lib/data";
 import { cn } from "@/lib/utils";
 import { useState } from "react";
-
 import BookCallModal from "../common/BookCallModal"; // adjust path
 export default function FinalCtaSection() {
   const [openModal, setOpenModal] = useState(false);
@@ -38,7 +36,6 @@ export default function FinalCtaSection() {
           />
         ))}
       </div>
-
       <MotionSection className="relative z-10 mx-auto flex max-w-[880px] flex-col items-center text-center">
         <h2 className="text-[40px] font-normal leading-[1.15] tracking-[-0.04em] text-[#222222] sm:text-[58px] lg:text-[64px]">
           {t("finalCta.title")}
