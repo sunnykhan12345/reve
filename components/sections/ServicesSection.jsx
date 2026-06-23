@@ -52,10 +52,7 @@ export default function ServicesSection() {
   };
 
   return (
-    <section
-      id="services"
-      className="overflow-hidden bg-white py-[80px] sm:py-[95px] lg:py-[120px]"
-    >
+    <section id="services" className="overflow-hidden bg-white section-spacing">
       <div className="mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[58px]">
         <MotionSection>
           <div className="grid items-start gap-10 lg:grid-cols-[360px_1fr] lg:gap-[72px]">

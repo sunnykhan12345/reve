@@ -17,9 +17,9 @@ export default function HeroSection() {
   return (
     <section
       id="home"
-      className="relative overflow-hidden bg-[linear-gradient(112deg,#ffffff_0%,#ffffff_72%,#ffe4e4_100%)] pb-14 pt-[145px] sm:pb-16 sm:pt-[160px] lg:pb-[58px] lg:pt-[176px]"
+      className="relative overflow-hidden bg-[linear-gradient(112deg,#ffffff_0%,#ffffff_72%,#ffe4e4_100%)]  pt-[145px]  sm:pt-[160px]  lg:pt-[176px]"
     >
-      <div className="mx-auto w-full max-w-[1440px] ">
+      <div className="mx-auto w-full max-w-[1440px]">
         <motion.div
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}

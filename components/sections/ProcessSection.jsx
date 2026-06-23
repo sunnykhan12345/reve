@@ -11,7 +11,7 @@ export default function ProcessSection() {
   return (
     <section
       id="process"
-      className="section-spacing bg-white mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[96px]"
+      className="section-spacin bg-white mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[96px]"
     >
       <div className="site-container">
         <MotionSection className="text-center">

@@ -12,7 +12,7 @@ export default function OptionsSection() {
   return (
     <section
       id="options"
-      className="section-spacing bg-white mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[96px]"
+      className=" bg-white mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[96px] section-spacing"
     >
       <div className="site-container">
         <MotionSection className="text-center">

@@ -16,7 +16,7 @@ export default function FinalCtaSection() {
   return (
     <section
       id="contact"
-      className="relative bg-white px-5 py-20 sm:px-8 lg:py-[112px] max-w-[1440px] mx-auto"
+      className="relative bg-white px-5 sm:px-8  max-w-[1440px] mx-auto pb-[80px] sm:pb-[95px] lg:pb-[140px]"
     >
       <div className="pointer-events-none absolute inset-0 hidden overflow-hidden lg:block">
         {ctaAvatars.map((avatar, index) => (
@@ -44,7 +44,11 @@ export default function FinalCtaSection() {
           <CtaButton onClick={() => setOpenModal(true)} />
         </div>
       </MotionSection>
-      <BookCallModal open={openModal} onClose={() => setOpenModal(false)} locale={locale}/>
+      <BookCallModal
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+        locale={locale}
+      />
     </section>
   );
 }

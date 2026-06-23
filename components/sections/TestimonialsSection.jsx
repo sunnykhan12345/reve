@@ -49,7 +49,7 @@ export default function TestimonialsSection() {
   const { t } = useLanguage();
 
   return (
-    <section id="reviews" className="section-spacing bg-white">
+    <section id="reviews" className="section-spacin bg-white section-spacing">
       <div className="site-container max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-[96px]">
         <MotionSection className="text-center">
           <SectionBadge>{t("reviews.badge")}</SectionBadge>
@@ -58,9 +58,15 @@ export default function TestimonialsSection() {
           </h2>
         </MotionSection>
 
-        <MotionSection delay={0.1} className="mt-16 columns-1 gap-6 sm:columns-2 lg:columns-3 [&>*]:mb-6">
+        <MotionSection
+          delay={0.1}
+          className="mt-16 columns-1 gap-6 sm:columns-2 lg:columns-3 [&>*]:mb-6"
+        >
           {testimonials.map((testimonial, index) => (
-            <TestimonialCard key={`${testimonial.name}-${index}`} item={testimonial} />
+            <TestimonialCard
+              key={`${testimonial.name}-${index}`}
+              item={testimonial}
+            />
           ))}
         </MotionSection>
       </div>

@@ -76,7 +76,7 @@ a {
   }
 
   .section-spacing {
-    @apply py-20 md:py-28 lg:py-[120px];
+    @apply py-20 md:py-28 lg:py-[140px];
   }
 
   .section-heading {

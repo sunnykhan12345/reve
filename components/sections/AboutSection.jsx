@@ -13,7 +13,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="section-spacing bg-white mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[96px]"
+      className="bg-white mx-auto w-full max-w-[1440px] px-5 sm:px-8 lg:px-[96px]"
     >
       <div className="site-container">
         <div className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-[88px]">
@@ -22,7 +22,7 @@ export default function AboutSection() {
             <h2 className="mt-8 text-[42px] font-bold leading-[1.14] tracking-[0.01em] text-black sm:text-[56px] lg:text-[58px]">
               {t("about.title")}
             </h2>
-            <p className="body-copy text-lg font-medium mt-14 max-w-[520px]">
+            <p className="body-copy text-lg font-medium  max-w-[520px]">
               {t("about.description")}
             </p>
             <div className="mt-14 overflow-hidden">
